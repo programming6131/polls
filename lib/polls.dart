@@ -333,9 +333,9 @@ class _PollsState extends State<Polls> {
             margin: EdgeInsets.all(0),
             width: MediaQuery.of(context).size.width,
             padding: EdgeInsets.all(0),
-            height: 35,
+            height: 55,
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.zero,
               color: widget.backgroundColor,
             ),
             child: OutlineButton(
@@ -352,7 +352,7 @@ class _PollsState extends State<Polls> {
                 color: widget.outlineColor,
               ),
               shape: RoundedRectangleBorder(
-                borderRadius: new BorderRadius.circular(20.0),
+                borderRadius: BorderRadius.zero,
               ),
             ),
           ),
@@ -363,10 +363,10 @@ class _PollsState extends State<Polls> {
           child: Container(
             margin: EdgeInsets.all(0),
             padding: EdgeInsets.all(0),
-            height: 35,
+            height: 55,
             width: MediaQuery.of(context).size.width,
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.zero,
               color: widget.backgroundColor,
             ),
             child: OutlineButton(
@@ -383,7 +383,7 @@ class _PollsState extends State<Polls> {
                 color: widget.outlineColor,
               ),
               shape: RoundedRectangleBorder(
-                borderRadius: new BorderRadius.circular(20.0),
+                borderRadius: BorderRadius.zero,
 //                              side: BorderSide(color: Colors.red)
               ),
             ),
@@ -399,7 +399,7 @@ class _PollsState extends State<Polls> {
             height: 35,
             width: MediaQuery.of(context).size.width,
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.zero,
               color: widget.backgroundColor,
             ),
             child: OutlineButton(
@@ -416,7 +416,7 @@ class _PollsState extends State<Polls> {
                 color: widget.outlineColor,
               ),
               shape: RoundedRectangleBorder(
-                borderRadius: new BorderRadius.circular(20.0),
+                borderRadius:  BorderRadius.zero,
 //                              side: BorderSide(color: Colors.red)
               ),
             ),
@@ -433,7 +433,7 @@ class _PollsState extends State<Polls> {
             height: 35,
             width: MediaQuery.of(context).size.width,
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.zero,
               color: widget.backgroundColor,
             ),
             child: OutlineButton(
@@ -450,7 +450,7 @@ class _PollsState extends State<Polls> {
                 color: widget.outlineColor,
               ),
               shape: RoundedRectangleBorder(
-                borderRadius: new BorderRadius.circular(20.0),
+                borderRadius:  BorderRadius.zero,
 //                              side: BorderSide(color: Colors.red)
               ),
             ),
