@@ -69,7 +69,7 @@ class Polls extends StatefulWidget {
     this.onVote,
     this.outlineColor = Colors.blue,
     this.backgroundColor = Colors.blueGrey,
-    this.onVoteBackgroundColor = Colors.blue,
+    this.onVoteBackgroundColor = Colors.red,
     this.leadingPollStyle,
     this.pollStyle,
     this.iconColor = Colors.black,
@@ -125,7 +125,7 @@ class Polls extends StatefulWidget {
         this.leadingPollStyle,
         this.pollStyle,
         this.backgroundColor = Colors.blue,
-        this.leadingBackgroundColor = Colors.blueAccent,
+        this.leadingBackgroundColor = Colors.redAccent,
         this.onVoteBackgroundColor = Colors.blueGrey,
         this.allowCreatorVote = false})
       : viewType = PollsType.creator,
@@ -239,10 +239,10 @@ class _PollsState extends State<Polls> {
 
     /// if polls style is null, it sets default pollstyle and leading pollstyle
     this.pollStyle = widget.pollStyle == null
-        ? TextStyle(color: Colors.black, fontWeight: FontWeight.w300)
+        ? TextStyle(color: Colors.black, fontWeight: FontWeight.bold)
         : this.pollStyle;
     this.leadingPollStyle = widget.leadingPollStyle == null
-        ? TextStyle(color: Colors.black, fontWeight: FontWeight.w800)
+        ? TextStyle(color: Colors.black, fontWeight: FontWeight.bold)
         : this.leadingPollStyle;
 
     /// choice values are set from children
@@ -328,10 +328,10 @@ class _PollsState extends State<Polls> {
         ),
         Container(
           width: double.infinity,
-          padding: EdgeInsets.only(bottom: 10),
+          padding: EdgeInsets.only(bottom: 18),
           child: Container(
             margin: EdgeInsets.all(0),
-            width: MediaQuery.of(context).size.width,
+            width: MediaQuery.of(context).size.width-10,
             padding: EdgeInsets.all(0),
             height: 55,
             decoration: BoxDecoration(
@@ -351,9 +351,6 @@ class _PollsState extends State<Polls> {
               borderSide: BorderSide(
                 color: widget.outlineColor,
               ),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.zero,
-              ),
             ),
           ),
         ),
@@ -364,7 +361,7 @@ class _PollsState extends State<Polls> {
             margin: EdgeInsets.all(0),
             padding: EdgeInsets.all(0),
             height: 55,
-            width: MediaQuery.of(context).size.width,
+            width: MediaQuery.of(context).size.width-10,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.zero,
               color: widget.backgroundColor,
@@ -382,10 +379,6 @@ class _PollsState extends State<Polls> {
               borderSide: BorderSide(
                 color: widget.outlineColor,
               ),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.zero,
-//                              side: BorderSide(color: Colors.red)
-              ),
             ),
           ),
         ),
@@ -397,7 +390,7 @@ class _PollsState extends State<Polls> {
             margin: EdgeInsets.all(0),
             padding: EdgeInsets.all(0),
             height: 35,
-            width: MediaQuery.of(context).size.width,
+            width: MediaQuery.of(context).size.width-10,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.zero,
               color: widget.backgroundColor,
@@ -415,10 +408,6 @@ class _PollsState extends State<Polls> {
               borderSide: BorderSide(
                 color: widget.outlineColor,
               ),
-              shape: RoundedRectangleBorder(
-                borderRadius:  BorderRadius.zero,
-//                              side: BorderSide(color: Colors.red)
-              ),
             ),
           ),
         )
@@ -431,7 +420,7 @@ class _PollsState extends State<Polls> {
             margin: EdgeInsets.all(0),
             padding: EdgeInsets.all(0),
             height: 35,
-            width: MediaQuery.of(context).size.width,
+            width: MediaQuery.of(context).size.width-10,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.zero,
               color: widget.backgroundColor,
@@ -448,10 +437,6 @@ class _PollsState extends State<Polls> {
               child: Text(this.c4, style: widget.pollStyle),
               borderSide: BorderSide(
                 color: widget.outlineColor,
-              ),
-              shape: RoundedRectangleBorder(
-                borderRadius:  BorderRadius.zero,
-//                              side: BorderSide(color: Colors.red)
               ),
             ),
           ),
@@ -684,7 +669,7 @@ class _PollsState extends State<Polls> {
       children: <Widget>[
         widget.question,
         SizedBox(
-          height: 12,
+          height: 18,
         ),
         Container(
           margin: EdgeInsets.fromLTRB(3, 3, 10, 3),
